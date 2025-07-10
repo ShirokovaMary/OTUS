@@ -1,0 +1,87 @@
+## Игнорировать файлы сборки и отладки ##
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+*.exe
+*.dll
+*.pdb
+*.config
+*.cache
+*.ilk
+*.nupkg
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Игнорировать файлы Rider, VS Code, Visual Studio ##
+.vs/
+.idea/
+.vscode/
+*.swp
+*.sublime-workspace
+*.DotSettings
+
+## Игнорировать зависимости и пакеты ##
+packages/
+[Nn]u[Gg]et/
+*.nupkg
+*.nuget.props
+*.nuget.targets
+
+## Игнорировать тестовые результаты ##
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+
+## Игнорировать локальные настройки ##
+appsettings.Development.json
+appsettings.Local.json
+appsettings.private.json
+secrets.json
+launchSettings.json
+
+## Игнорировать резервные копии и временные файлы ##
+*~
+*.bak
+*.tmp
+*.temp
+*.log
+*.vspscc
+*.vssscc
+
+## Игнорировать файлы Docker и Azure ##
+[Dd]ocker[Ll]ogs/
+*.aci
+*.aur
+
+## Игнорировать файлы веб-приложений ##
+*.min.js
+*.min.css
+*.css.map
+*.js.map
+
+## Игнорировать файлы данных ##
+*.mdf
+*.ldf
+*.sqlite
+
+## Игнорировать файлы резервных копий и миграций ##
+_ReSharper.*
+*.resharper
+*.dotCover
+
+## Игнорировать файлы dotnet-инструментов ##
+.dotnet/
+tools/
+
+## Игнорировать файлы покрытия кода ##
+coverage*.xml
+*.coverage
+*.opencover.xml
+
+## Игнорировать файлы манифеста и лицензии (если генерируются) ##
+*.manifest
+*.licx
