@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceBattleSrv", "SpaceBatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceBattleTests", "SpaceBattleTests\SpaceBattleTests.csproj", "{AC369CF6-62AE-4CB3-A3C5-3E90815928C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceBattleInternal", "SpaceBattleInternal\SpaceBattleInternal.csproj", "{229CA812-13DD-4309-9B47-0B888B0F704D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{AC369CF6-62AE-4CB3-A3C5-3E90815928C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC369CF6-62AE-4CB3-A3C5-3E90815928C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC369CF6-62AE-4CB3-A3C5-3E90815928C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{229CA812-13DD-4309-9B47-0B888B0F704D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{229CA812-13DD-4309-9B47-0B888B0F704D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{229CA812-13DD-4309-9B47-0B888B0F704D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{229CA812-13DD-4309-9B47-0B888B0F704D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,7 +50,6 @@ Global
 		{69213E68-892E-4F16-91D7-69D08D235D6E} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
 		{8694042A-F2E4-469E-A18E-2E8748C97F9A} = {69213E68-892E-4F16-91D7-69D08D235D6E}
 		{AC369CF6-62AE-4CB3-A3C5-3E90815928C7} = {69213E68-892E-4F16-91D7-69D08D235D6E}
-		{229CA812-13DD-4309-9B47-0B888B0F704D} = {69213E68-892E-4F16-91D7-69D08D235D6E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7DFD367D-3741-4873-91DD-1872DF45F810}
