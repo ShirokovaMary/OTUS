@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace SpaceBattleSrv
 {
-    public class Turn
+    public class Turn: ICommand
     {
-        public Turn() { }
+        ITurnable turnable { get; }
+        int AngleVelocity { get; set; }
 
-        public void Execute(ITurnable turnable, int agnleVelocity)
+        public Turn(ITurnable turnable, int angleVelocity)
+        { 
+            ArgumentNullException.ThrowIfNull(turnable, nameof(turnable));
+            this.turnable = turnable;
+            this.AngleVelocity = angleVelocity;
+        }
+
+        public void Execute()
         {
-            if (turnable == null)
-                throw new ArgumentNullException(nameof(turnable));
-
             var velocity = turnable.Velocity;
 
-            velocity.Angle += agnleVelocity;
+            velocity.Angle += AngleVelocity;
 
             turnable.Velocity = velocity;
         }
