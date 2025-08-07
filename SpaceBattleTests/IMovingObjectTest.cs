@@ -29,13 +29,14 @@ namespace SpaceBattleTests
         {
             // Arrange
             var mock = new Mock<IMovable>();
-            mock.SetupGet(m=>m.Position).Throws<InvalidOperationException>();
+            mock.SetupProperty(m => m.Position, new Point(12, 5));
 
             var movement = new Movement(mock.Object);
 
+            mock.SetupGet(m=>m.Position).Throws<InvalidOperationException>();
+
             //Act&Assert
             Assert.Throws<InvalidOperationException>( () => movement.Execute());
-
         }
 
         [Fact]
@@ -43,7 +44,8 @@ namespace SpaceBattleTests
         {
             // Arrange
             var mock = new Mock<IMovable>();
-            mock.SetupGet(m=>m.Velocity).Throws<InvalidOperationException>();
+            mock.SetupGet(m=>m.Velocity).Throws<InvalidOperationException>(); 
+            mock.SetupProperty(m => m.Position, new Point(12, 5));
 
             var movement = new Movement(mock.Object);
 
@@ -64,5 +66,18 @@ namespace SpaceBattleTests
             //Act&Assert
             Assert.Throws<InvalidOperationException>(() => movement.Execute());
         }
+
+
+        [Fact]
+        public void Movable_ThrowsException_WhenPositionIsNull()
+        {
+            // Arrange
+            var mock = new Mock<IMovable>();
+            mock.SetupProperty(m => m.Position);
+
+            //Act&Assert
+            Assert.Throws<ArgumentNullException>(() => new Movement(mock.Object));
+        }
+
     }
 }

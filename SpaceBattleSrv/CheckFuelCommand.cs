@@ -24,6 +24,7 @@ namespace SpaceBattleSrv
             if (fuelConsumer.FuelLevel - fuelConsumer.FuelConsumption < 0)
                 throw new CommandException("Не достаточно топлива");
 
+
         }
     }
 }
