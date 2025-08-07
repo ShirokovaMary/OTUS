@@ -2,13 +2,18 @@
 
 namespace SpaceBattleSrv
 {
-    public class Movement
+    public class Movement: ICommand
     {
-        public void Execute(IMovable movable)
-        {
-            if (movable == null)
-                throw new ArgumentNullException(nameof(movable));
+        IMovable movable;
 
+        public Movement(IMovable movable)
+        {
+            ArgumentNullException.ThrowIfNull(movable);
+            this.movable = movable;
+        }
+
+        public void Execute()
+        {
             var velocity = movable.Velocity;
 
             movable.Position = movable.Position + velocity;

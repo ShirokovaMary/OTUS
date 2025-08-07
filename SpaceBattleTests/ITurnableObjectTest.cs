@@ -18,10 +18,10 @@ namespace SpaceBattleTests
             var mock = new Mock<ITurnable>();
             mock.SetupProperty(m => m.Velocity, new Vector2(-7, 3));
 
-            var turn = new Turn();
+            var turn = new Turn(mock.Object, 1);
 
             //Act
-            turn.Execute(mock.Object, 1);
+            turn.Execute();
 
             //Assert
             var turnable = mock.Object;
