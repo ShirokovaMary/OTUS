@@ -28,7 +28,7 @@ namespace SpaceBattleTests
 
             // Assert
             var output = logOutput.ToString();
-            Assert.Contains("Test error", logOutput.ToString());
+            Assert.Contains("Test error", output);
             Assert.Contains(nameof(FakeCommand), output);
         }
 
