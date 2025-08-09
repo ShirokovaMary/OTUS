@@ -11,7 +11,7 @@ namespace SpaceBattleSrv
     {
         IRotatable rotatable { get; }
 
-        public RotateCommand(IRotatable rotatable, int angle)
+        public RotateCommand(IRotatable rotatable)
         {
             ArgumentNullException.ThrowIfNull(rotatable, nameof(rotatable));
             this.rotatable = rotatable;
