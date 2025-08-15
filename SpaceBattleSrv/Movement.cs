@@ -9,6 +9,9 @@ namespace SpaceBattleSrv
         public Movement(IMovable movable)
         {
             ArgumentNullException.ThrowIfNull(movable);
+
+            ArgumentNullException.ThrowIfNull(movable.Position);
+
             this.movable = movable;
         }
 
